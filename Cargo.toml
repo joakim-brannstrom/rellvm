@@ -1,0 +1,27 @@
+[package]
+name = "rellvm"
+version = "0.0.1"
+authors = ["Joakim Brännström <joakim.brannstrom@gm.com>"]
+description = "High level wrappers for llvm-sys"
+license = "BSL-1.0"
+repository = "https://github.com/joakim-brannstrom/rellvm"
+homepage = "https://github.com/joakim-brannstrom/rellvm"
+documentation = "https://docs.rs/rellvm/"
+
+categories = ["api-bindings"]
+keywords = ["llvm"]
+
+[dependencies]
+# TODO It should use "*" and still work on Travis.
+llvm-sys="50"
+libc="*"
+
+[badges]
+# Travis CI:  in format "<user>/<project>" is required.
+# `branch` is optional; default is `master`
+travis-ci = { repository = "joakim-brannstrom/rellvm", branch = "master" }
+
+# Maintenance: `status` is required Available options are `actively-developed`,
+# `passively-maintained`, `as-is`, `none`, `experimental`, `looking-for-maintainer`
+# and `deprecated`.
+maintenance = { status = "experimental" }
