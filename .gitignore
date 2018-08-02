@@ -18,7 +18,8 @@ __test__*__
 
 # rust
 target/
+Cargo.lock
+**/*.rs.bk
 
 # python
 *.pyc
-
