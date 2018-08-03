@@ -7,7 +7,23 @@ extern crate libc;
 extern crate llvm_sys;
 
 #[macro_use]
+mod macros;
+
 mod utils;
 
-mod context;
-mod module;
+pub mod ast;
+pub mod context;
+pub mod diagnostic;
+pub mod io;
+pub mod memory;
+pub mod module;
+pub mod value;
+
+// Common traits used by most types
+
+/// A type that has an underlying ptr such as a LLVM*Ref.
+/// `macros.rs` contains a helper that implement the trait for a type.
+pub trait PtrTrait<T> {
+    fn as_ptr(&self) -> &T;
+    fn as_mut_ptr(&mut self) -> &mut T;
+}
