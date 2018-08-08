@@ -1,12 +1,12 @@
-# rellvm
+# rellvm [![Build Status](https://travis-ci.org/joakim-brannstrom/rellvm.svg?branch=master)](https://travis-ci.org/joakim-brannstrom/rellvm)
 
-**rellvm** add 1-2 sentences of description.
+**rellvm** is a high level wrapper for llvm-sys. Its primary purpose (for now) is to analyze LLVM IR.
 
 # Getting Started
 
 rellvm depends on the following software packages:
 
- * [Rust compiler](https://www.rust-lang.org/en-US/install.html) (rustc 1.0+)
+ * [Rust compiler](https://www.rust-lang.org/en-US/install.html) (rustc 1.26+)
 
 For users running Ubuntu one of the dependencies can be installed with apt.
 ```sh
@@ -29,4 +29,5 @@ Done! Have fun.
 Don't be shy to report any issue that you find.
 
 # Credit
-TODO
+
+The developers of the llvm and llvm-sys crate. Awesome work. This crate would not have been possible without those people.
