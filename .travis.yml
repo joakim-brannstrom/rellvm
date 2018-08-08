@@ -1,0 +1,31 @@
+language: rust
+
+rust:
+    - 1.26.0
+    - stable
+    - nightly
+
+os:
+  - linux
+
+matrix:
+    allow_failures:
+        - rust: nightly
+
+cache: cargo
+
+notifications:
+    email: false
+
+git:
+    depth: 1
+
+branches:
+    only:
+        - master
+
+script:
+    # make it easier to see what version is used on travis
+    - llvm-config --version
+    - cargo test --verbose -- --nocapture
+    - cargo doc --verbose
