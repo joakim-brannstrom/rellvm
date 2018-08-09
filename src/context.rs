@@ -80,7 +80,7 @@ impl Context {
         if success == 0 {
             Ok(Module::from(module))
         } else {
-            Err(self.ctx.drain())
+            Err(self.ctx.drain().collect())
         }
     }
 

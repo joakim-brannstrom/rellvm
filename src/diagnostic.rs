@@ -49,11 +49,8 @@ impl DiagnosticHandlerCtx {
     }
 
     /// Drain the collected diagnostic messages.
-    pub fn drain(&mut self) -> Vec<Diagnostic> {
-        self.values
-            .drain(..)
-            .map(|x| x.as_diagnostic())
-            .collect::<Vec<Diagnostic>>()
+    pub fn drain<'a>(&'a mut self) -> impl Iterator<Item = Diagnostic> + 'a {
+        self.values.drain(..).map(|x| x.as_diagnostic())
     }
 }
 

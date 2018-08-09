@@ -4,3 +4,11 @@
 //!
 //! This file defines an hierarchy of enums that try to capture the structure of an AST over the
 //! LLVM IR.
+
+// use module;
+//
+// enum BasicBlock {
+// }
+//
+// enum Function {
+// }
